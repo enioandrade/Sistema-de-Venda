@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Sistema_de_Venda
 {
@@ -43,8 +44,10 @@ namespace Sistema_de_Venda
                     lv.SubItems.Add(user.Endereco);
                     lv.SubItems.Add(user.Telefone);
                     lv.SubItems.Add(user.Usuario);
-                    lv.SubItems.Add(user.Senha);
+                    lv.SubItems.Add(user.Senha);                   
+                    lv.SubItems.Add(user.Admin);
                     ltv_dados.Items.Add(lv);
+                    
                 }
             }
         }
@@ -59,12 +62,17 @@ namespace Sistema_de_Venda
 
             try
             {
+                
                 Funcionario func;
-                func = new Funcionario(txt_nome.Text, txt_telefone.Text, txt_cpf.Text, txt_email.Text, txt_data_nasc.Text, txt_end.Text, txt_usuario.Text, txt_senha.Text);
-                DAO usuario = new DAO();
+                criptografia md5 = new criptografia();
+                string cripto = md5.crip(txt_senha.Text);
 
-               
+                func = new Funcionario(Id, txt_nome.Text, txt_telefone.Text, txt_cpf.Text, txt_email.Text, txt_data_nasc.Text, txt_end.Text, txt_usuario.Text, cripto, comboBoxAdmin.Text);
+                    DAO usuario = new DAO();
+
+
                     usuario.Inserir(func);
+ 
 
                 MessageBox.Show("Cadastro Efetuado com Sucesso");
                 AtualizarListView();
@@ -90,6 +98,8 @@ namespace Sistema_de_Venda
             txt_id.Clear();
             txt_usuario.Clear();
             txt_senha.Clear();
+
+           
         }
         private void btn_limpar_Click(object sender, EventArgs e)
         {
@@ -141,12 +151,18 @@ namespace Sistema_de_Venda
         {
             try
             {
+
                 Funcionario func;
-                func = new Funcionario(Id, txt_nome.Text, txt_telefone.Text, txt_cpf.Text, txt_email.Text, txt_data_nasc.Text, txt_end.Text, txt_usuario.Text, txt_senha.Text);
-                DAO usuario = new DAO();
+                criptografia md5 = new criptografia();
+                string cripto = md5.crip(txt_senha.Text);
 
 
-                usuario.Atualizar(func);
+                func = new Funcionario(Id, txt_nome.Text, txt_telefone.Text, txt_cpf.Text, txt_email.Text, txt_data_nasc.Text, txt_end.Text, txt_usuario.Text, cripto, comboBoxAdmin.Text);
+                    DAO usuario = new DAO();
+
+
+                    usuario.Atualizar(func);
+
 
                 MessageBox.Show("edição Efetuada com Sucesso");
                 AtualizarListView();
@@ -175,18 +191,22 @@ namespace Sistema_de_Venda
                 txt_telefone.Text = ltv_dados.Items[index].SubItems[6].Text;
                 txt_usuario.Text = ltv_dados.Items[index].SubItems[7].Text;
                 txt_senha.Text = ltv_dados.Items[index].SubItems[8].Text;
+                comboBoxAdmin.Text = ltv_dados.Items[index].SubItems[9].Text;
 
+             }
 
-
-
-
-
-            }
             catch (Exception)
             {
                 MessageBox.Show("Você precisa selecionar uma linha", "Erro");
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+     
     }
 }
 

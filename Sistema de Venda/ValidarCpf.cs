@@ -14,7 +14,6 @@ namespace Sistema_de_Venda
             int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
             string tempCpf;
             string digito;
-            string admin;
             int soma;
             int resto;
             cpf = cpf.Trim();
