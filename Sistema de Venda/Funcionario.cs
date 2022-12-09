@@ -17,11 +17,14 @@ namespace Sistema_de_Venda
         private string _cpf;
         private string _usuario;
         private string _senha;
+        private string _admin;
+  
+        
 
 
-
-        public Funcionario(string nome, string telefone, string cpf, string email, string data_nasc, string endereco, string usuario, string senha)
+        public Funcionario(string nome, string telefone, string cpf, string email, string data_nasc, string endereco, string usuario, string senha, string admin)
         {
+            
             Nome = nome;
             Telefone = telefone;
             Email = email;
@@ -30,13 +33,24 @@ namespace Sistema_de_Venda
             Cpf = cpf;
             Usuario = usuario;
             Senha = senha;
-
+            Admin = admin;
+        
+            
+        
+            
         }
-        public Funcionario(int id, string nome, string telefone, string cpf, string email, string data_nasc, string endereco, string usuario, string senha) :
-            this(nome, telefone, cpf,email, data_nasc, endereco, usuario, senha)
+        public Funcionario(string usuario, string senha)
+        {
+            Senha = senha;
+            Usuario = usuario;
+        }
+        public Funcionario(int id, string nome, string telefone, string cpf, string email, string data_nasc, string endereco, string usuario, string senha, string admin) :
+            this(nome, telefone, cpf,email, data_nasc, endereco, usuario, senha, admin)
         {
             _id = id;
         }
+
+  
         public int Id
         {
             get { return _id; }
@@ -137,7 +151,19 @@ namespace Sistema_de_Venda
                 _senha = value;
             }
         }
+        public string Admin
+        {
+            get { return _admin; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    throw new Exception("O nome informado não é um texto válido");
+                _admin = value;
+            }
+        }
 
-        
+ 
+
+
     }
 }

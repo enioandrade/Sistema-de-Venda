@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_funcionarios));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,9 +38,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btn_cadastrar = new System.Windows.Forms.Button();
-            this.btn_editar = new System.Windows.Forms.Button();
-            this.btn_excluir = new System.Windows.Forms.Button();
             this.ltv_dados = new System.Windows.Forms.ListView();
             this.clh_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clh_nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -50,19 +46,26 @@
             this.clh_data_nasc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clh_end = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clh_tel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btn_voltar = new System.Windows.Forms.Button();
+            this.clh_usuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clh_senha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clh_admin = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txt_data_nasc = new System.Windows.Forms.MaskedTextBox();
             this.txt_telefone = new System.Windows.Forms.MaskedTextBox();
             this.txt_cpf = new System.Windows.Forms.MaskedTextBox();
-            this.btn_limpar = new System.Windows.Forms.Button();
             this.txt_id = new System.Windows.Forms.TextBox();
             this.lbl_id = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_senha = new System.Windows.Forms.TextBox();
-            this.clh_usuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clh_senha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboBoxAdmin = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_limpar = new System.Windows.Forms.Button();
+            this.btn_voltar = new System.Windows.Forms.Button();
+            this.btn_excluir = new System.Windows.Forms.Button();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.btn_cadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -75,21 +78,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de Funcionários";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(0, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nome :";
-            // 
             // txt_nome
             // 
-            this.txt_nome.Location = new System.Drawing.Point(69, 123);
+            this.txt_nome.Location = new System.Drawing.Point(69, 107);
             this.txt_nome.Name = "txt_nome";
-            this.txt_nome.Size = new System.Drawing.Size(592, 22);
+            this.txt_nome.Size = new System.Drawing.Size(731, 22);
             this.txt_nome.TabIndex = 0;
             this.txt_nome.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -97,7 +90,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(667, 119);
+            this.label3.Location = new System.Drawing.Point(803, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 25);
             this.label3.TabIndex = 3;
@@ -127,7 +120,7 @@
             // 
             this.txt_end.Location = new System.Drawing.Point(382, 177);
             this.txt_end.Name = "txt_end";
-            this.txt_end.Size = new System.Drawing.Size(511, 22);
+            this.txt_end.Size = new System.Drawing.Size(649, 22);
             this.txt_end.TabIndex = 3;
             this.txt_end.Text = " ";
             // 
@@ -152,58 +145,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(636, 229);
+            this.label7.Location = new System.Drawing.Point(751, 228);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 25);
             this.label7.TabIndex = 12;
             this.label7.Text = "telefone :";
-            // 
-            // btn_cadastrar
-            // 
-            this.btn_cadastrar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_cadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.Image")));
-            this.btn_cadastrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_cadastrar.Location = new System.Drawing.Point(12, 321);
-            this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Size = new System.Drawing.Size(77, 82);
-            this.btn_cadastrar.TabIndex = 8;
-            this.btn_cadastrar.Text = "Adcionar";
-            this.btn_cadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_cadastrar.UseVisualStyleBackColor = false;
-            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
-            // 
-            // btn_editar
-            // 
-            this.btn_editar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_editar.Image = ((System.Drawing.Image)(resources.GetObject("btn_editar.Image")));
-            this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_editar.Location = new System.Drawing.Point(706, 321);
-            this.btn_editar.Name = "btn_editar";
-            this.btn_editar.Size = new System.Drawing.Size(86, 82);
-            this.btn_editar.TabIndex = 11;
-            this.btn_editar.Text = "Editar";
-            this.btn_editar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_editar.UseVisualStyleBackColor = true;
-            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
-            // 
-            // btn_excluir
-            // 
-            this.btn_excluir.BackColor = System.Drawing.Color.Transparent;
-            this.btn_excluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_excluir.Image = ((System.Drawing.Image)(resources.GetObject("btn_excluir.Image")));
-            this.btn_excluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_excluir.Location = new System.Drawing.Point(603, 321);
-            this.btn_excluir.Name = "btn_excluir";
-            this.btn_excluir.Size = new System.Drawing.Size(86, 82);
-            this.btn_excluir.TabIndex = 10;
-            this.btn_excluir.Text = "Excluir";
-            this.btn_excluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_excluir.UseVisualStyleBackColor = false;
-            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
             // 
             // ltv_dados
             // 
@@ -216,12 +162,13 @@
             this.clh_end,
             this.clh_tel,
             this.clh_usuario,
-            this.clh_senha});
+            this.clh_senha,
+            this.clh_admin});
             this.ltv_dados.FullRowSelect = true;
             this.ltv_dados.HideSelection = false;
-            this.ltv_dados.Location = new System.Drawing.Point(11, 420);
+            this.ltv_dados.Location = new System.Drawing.Point(9, 409);
             this.ltv_dados.Name = "ltv_dados";
-            this.ltv_dados.Size = new System.Drawing.Size(888, 137);
+            this.ltv_dados.Size = new System.Drawing.Size(1022, 137);
             this.ltv_dados.TabIndex = 18;
             this.ltv_dados.UseCompatibleStateImageBehavior = false;
             this.ltv_dados.View = System.Windows.Forms.View.Details;
@@ -262,26 +209,26 @@
             this.clh_tel.Text = "Telefone";
             this.clh_tel.Width = 102;
             // 
-            // btn_voltar
+            // clh_usuario
             // 
-            this.btn_voltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("btn_voltar.Image")));
-            this.btn_voltar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_voltar.Location = new System.Drawing.Point(807, 321);
-            this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(86, 82);
-            this.btn_voltar.TabIndex = 12;
-            this.btn_voltar.Text = "Voltar";
-            this.btn_voltar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_voltar.UseVisualStyleBackColor = true;
-            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            this.clh_usuario.Text = "Usuario";
+            this.clh_usuario.Width = 139;
+            // 
+            // clh_senha
+            // 
+            this.clh_senha.Text = "Senha";
+            this.clh_senha.Width = 115;
+            // 
+            // clh_admin
+            // 
+            this.clh_admin.Text = "Admin";
+            this.clh_admin.Width = 139;
             // 
             // txt_data_nasc
             // 
             this.txt_data_nasc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_data_nasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_data_nasc.Location = new System.Drawing.Point(786, 119);
+            this.txt_data_nasc.Location = new System.Drawing.Point(922, 103);
             this.txt_data_nasc.Mask = "00/00/0000";
             this.txt_data_nasc.Name = "txt_data_nasc";
             this.txt_data_nasc.Size = new System.Drawing.Size(105, 23);
@@ -292,7 +239,7 @@
             // 
             this.txt_telefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_telefone.Location = new System.Drawing.Point(740, 234);
+            this.txt_telefone.Location = new System.Drawing.Point(855, 233);
             this.txt_telefone.Mask = "(00) 00000 - 0000";
             this.txt_telefone.Name = "txt_telefone";
             this.txt_telefone.Size = new System.Drawing.Size(176, 20);
@@ -310,24 +257,9 @@
             this.txt_cpf.TabIndex = 2;
             this.txt_cpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // btn_limpar
-            // 
-            this.btn_limpar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_limpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_limpar.Image = ((System.Drawing.Image)(resources.GetObject("btn_limpar.Image")));
-            this.btn_limpar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_limpar.Location = new System.Drawing.Point(104, 321);
-            this.btn_limpar.Name = "btn_limpar";
-            this.btn_limpar.Size = new System.Drawing.Size(86, 82);
-            this.btn_limpar.TabIndex = 9;
-            this.btn_limpar.Text = "Limpar";
-            this.btn_limpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_limpar.UseVisualStyleBackColor = true;
-            this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
-            // 
             // txt_id
             // 
-            this.txt_id.Location = new System.Drawing.Point(834, 81);
+            this.txt_id.Location = new System.Drawing.Point(970, 39);
             this.txt_id.Name = "txt_id";
             this.txt_id.ReadOnly = true;
             this.txt_id.Size = new System.Drawing.Size(57, 22);
@@ -337,7 +269,7 @@
             // 
             this.lbl_id.AutoSize = true;
             this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id.Location = new System.Drawing.Point(786, 79);
+            this.lbl_id.Location = new System.Drawing.Point(922, 37);
             this.lbl_id.Name = "lbl_id";
             this.lbl_id.Size = new System.Drawing.Size(42, 25);
             this.lbl_id.TabIndex = 27;
@@ -378,22 +310,124 @@
             this.txt_senha.TabIndex = 7;
             this.txt_senha.UseSystemPasswordChar = true;
             // 
-            // clh_usuario
+            // comboBoxAdmin
             // 
-            this.clh_usuario.Text = "Usuario";
-            this.clh_usuario.Width = 139;
+            this.comboBoxAdmin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAdmin.FormattingEnabled = true;
+            this.comboBoxAdmin.Items.AddRange(new object[] {
+            "SIM",
+            "NAO"});
+            this.comboBoxAdmin.Location = new System.Drawing.Point(912, 276);
+            this.comboBoxAdmin.Name = "comboBoxAdmin";
+            this.comboBoxAdmin.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxAdmin.TabIndex = 31;
+            this.comboBoxAdmin.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // clh_senha
+            // label10
             // 
-            this.clh_senha.Text = "Senha";
-            this.clh_senha.Width = 152;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(832, 275);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(79, 25);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Admin :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(0, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nome :";
+            // 
+            // btn_limpar
+            // 
+            this.btn_limpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_limpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_limpar.Image = ((System.Drawing.Image)(resources.GetObject("btn_limpar.Image")));
+            this.btn_limpar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_limpar.Location = new System.Drawing.Point(104, 321);
+            this.btn_limpar.Name = "btn_limpar";
+            this.btn_limpar.Size = new System.Drawing.Size(86, 82);
+            this.btn_limpar.TabIndex = 9;
+            this.btn_limpar.Text = "Limpar";
+            this.btn_limpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_limpar.UseVisualStyleBackColor = true;
+            this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
+            // 
+            // btn_voltar
+            // 
+            this.btn_voltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("btn_voltar.Image")));
+            this.btn_voltar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_voltar.Location = new System.Drawing.Point(947, 321);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(86, 82);
+            this.btn_voltar.TabIndex = 12;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            // 
+            // btn_excluir
+            // 
+            this.btn_excluir.BackColor = System.Drawing.Color.Transparent;
+            this.btn_excluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_excluir.Image = ((System.Drawing.Image)(resources.GetObject("btn_excluir.Image")));
+            this.btn_excluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_excluir.Location = new System.Drawing.Point(743, 321);
+            this.btn_excluir.Name = "btn_excluir";
+            this.btn_excluir.Size = new System.Drawing.Size(86, 82);
+            this.btn_excluir.TabIndex = 10;
+            this.btn_excluir.Text = "Excluir";
+            this.btn_excluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_excluir.UseVisualStyleBackColor = false;
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
+            // 
+            // btn_editar
+            // 
+            this.btn_editar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_editar.Image = ((System.Drawing.Image)(resources.GetObject("btn_editar.Image")));
+            this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_editar.Location = new System.Drawing.Point(846, 321);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(86, 82);
+            this.btn_editar.TabIndex = 11;
+            this.btn_editar.Text = "Editar";
+            this.btn_editar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
+            // 
+            // btn_cadastrar
+            // 
+            this.btn_cadastrar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.Image")));
+            this.btn_cadastrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_cadastrar.Location = new System.Drawing.Point(12, 321);
+            this.btn_cadastrar.Name = "btn_cadastrar";
+            this.btn_cadastrar.Size = new System.Drawing.Size(77, 82);
+            this.btn_cadastrar.TabIndex = 8;
+            this.btn_cadastrar.Text = "Adicionar";
+            this.btn_cadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_cadastrar.UseVisualStyleBackColor = false;
+            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
             // 
             // frm_funcionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(905, 570);
+            this.ClientSize = new System.Drawing.Size(1045, 570);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.comboBoxAdmin);
             this.Controls.Add(this.txt_senha);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_usuario);
@@ -431,7 +465,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_nome;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -464,5 +497,9 @@
         private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_senha;
+        private System.Windows.Forms.ComboBox comboBoxAdmin;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ColumnHeader clh_admin;
     }
 }

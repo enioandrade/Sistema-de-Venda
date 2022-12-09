@@ -12,11 +12,11 @@ namespace Sistema_de_Venda
 {
     public partial class Menu : Form
     {
-        public Menu(bool admin)
+        public Menu(string admin)
         {
            
             InitializeComponent();
-            if(admin == false)
+            if(admin == "NAO")
                 cadastrosToolStripMenuItem.Visible = false;
         }
 
@@ -37,5 +37,20 @@ namespace Sistema_de_Venda
             Close();
         }
 
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frm_produto frm = new frm_produto();
+            frm.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frm_Venda frm = new frm_Venda();
+            frm.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

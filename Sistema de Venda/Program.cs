@@ -14,9 +14,10 @@ namespace Sistema_de_Venda
         [STAThread]
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_login());
+            Application.Run(new frm_carregar());
         }
     }
 }
