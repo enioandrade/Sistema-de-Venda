@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,18 +32,30 @@ namespace Sistema_de_Venda
             try
             {
                 Funcionario login;
+                string usuario = txt_usuario.Text;
+                string senha = txt_senha.Text;
 
-                criptografia md5 = new criptografia();
-                string hash = md5.crip(txt_senha.Text);
+                Criptografia Cry = new Criptografia();
+                string cript = Cry.EncodeToBase64(senha);
 
-                login = new Funcionario(txt_usuario.Text, hash);
-
+                login = new Funcionario(txt_usuario.Text, cript);
                 DAO Dao = new DAO();
                 admin = Dao.EntrarLogin(login);
 
-                MessageBox.Show(hash);
+                MessageBox.Show(cript);
+                //Funcionario login;
 
-              
+                //criptografia md5 = new criptografia();
+                //string hash = md5.crip(txt_senha.Text);
+
+                //login = new Funcionario(txt_usuario.Text, hash);
+
+                //DAO Dao = new DAO();
+                //admin = Dao.EntrarLogin(login);
+
+                //MessageBox.Show(hash);
+
+
 
                 if (admin != null)
                 {

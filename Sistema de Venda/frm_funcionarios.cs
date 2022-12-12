@@ -64,8 +64,8 @@ namespace Sistema_de_Venda
             {
                 
                 Funcionario func;
-                criptografia md5 = new criptografia();
-                string cripto = md5.crip(txt_senha.Text);
+                Criptografia cry = new Criptografia();
+                string cripto = cry.EncodeToBase64(txt_senha.Text);
 
                 func = new Funcionario(Id, txt_nome.Text, txt_telefone.Text, txt_cpf.Text, txt_email.Text, txt_data_nasc.Text, txt_end.Text, txt_usuario.Text, cripto, comboBoxAdmin.Text);
                     DAO usuario = new DAO();
@@ -153,8 +153,8 @@ namespace Sistema_de_Venda
             {
 
                 Funcionario func;
-                criptografia md5 = new criptografia();
-                string cripto = md5.crip(txt_senha.Text);
+                Criptografia cry = new Criptografia();
+                string cripto = cry.EncodeToBase64(txt_senha.Text);
 
 
                 func = new Funcionario(Id, txt_nome.Text, txt_telefone.Text, txt_cpf.Text, txt_email.Text, txt_data_nasc.Text, txt_end.Text, txt_usuario.Text, cripto, comboBoxAdmin.Text);

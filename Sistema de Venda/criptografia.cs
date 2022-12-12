@@ -8,24 +8,55 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Sistema_de_Venda
 {
-    internal class criptografia
+
+    public class Criptografia
     {
-        public string crip(string cripto)
+        public string EncodeToBase64(string texto)
         {
-            MD5 md5 = new MD5CryptoServiceProvider();
-
-            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(cripto));
-
-            byte[] resultado = md5.Hash;
-
-            StringBuilder Construtor = new StringBuilder();
-            for (int i = 0; i < resultado.Length; i++)
+            try
             {
-
-                Construtor.Append(resultado[i].ToString("x2"));
+                byte[] textoAsBytes = Encoding.ASCII.GetBytes(texto);
+                string resultado = System.Convert.ToBase64String(textoAsBytes);
+                return resultado;
             }
-
-            return Construtor.ToString();
+            catch (Exception)
+            {
+                throw;
+            }
         }
+        //converte de base64 para texto
+        public string DecodeFrom64(string dados)
+        {
+            try
+            {
+                byte[] dadosAsBytes = System.Convert.FromBase64String(dados);
+                string resultado = System.Text.ASCIIEncoding.ASCII.GetString(dadosAsBytes);
+                return resultado;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        //internal class criptografia
+        //{
+        //    public string crip(string cripto)
+        //    {
+        //        MD5 md5 = new MD5CryptoServiceProvider();
+
+        //        md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(cripto));
+
+        //        byte[] resultado = md5.Hash;
+
+        //        StringBuilder Construtor = new StringBuilder();
+        //        for (int i = 0; i < resultado.Length; i++)
+        //        {
+
+        //            Construtor.Append(resultado[i].ToString("x2"));
+        //        }
+
+        //        return Construtor.ToString();
+        //    }
+        //}
     }
 }
