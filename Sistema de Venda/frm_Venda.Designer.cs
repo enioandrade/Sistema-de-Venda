@@ -80,9 +80,9 @@
             this.panel_produtos.Controls.Add(this.ltv_panel);
             this.panel_produtos.Controls.Add(this.label2);
             this.panel_produtos.Controls.Add(this.btn_voltar);
-            this.panel_produtos.Location = new System.Drawing.Point(6, 55);
+            this.panel_produtos.Location = new System.Drawing.Point(0, 87);
             this.panel_produtos.Name = "panel_produtos";
-            this.panel_produtos.Size = new System.Drawing.Size(575, 378);
+            this.panel_produtos.Size = new System.Drawing.Size(575, 389);
             this.panel_produtos.TabIndex = 2;
             this.panel_produtos.Visible = false;
             // 

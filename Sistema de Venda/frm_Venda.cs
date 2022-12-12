@@ -56,6 +56,7 @@ namespace Sistema_de_Venda
         }
         private void frm_Venda_Load_1(object sender, EventArgs e)
         {
+
             try
             {
                 AtualizarListView();
@@ -85,5 +86,6 @@ namespace Sistema_de_Venda
          
       
         }
+
     }
 }
