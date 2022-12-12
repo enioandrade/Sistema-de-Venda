@@ -323,6 +323,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frm_produto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_produto";
             this.Load += new System.EventHandler(this.frm_produto_Load);
             this.ResumeLayout(false);

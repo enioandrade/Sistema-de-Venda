@@ -12,10 +12,13 @@ namespace Sistema_de_Venda
 {
     public partial class frm_Venda : Form
     {
+        
         public frm_Venda()
         {
             InitializeComponent();
         }
+
+
 
         private void btn_produtos_Click(object sender, EventArgs e)
         {
@@ -61,6 +64,26 @@ namespace Sistema_de_Venda
             {
                 MessageBox.Show(err.Message, "AVISO DE ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ltv_panel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+        
+         
+      
         }
     }
 }
