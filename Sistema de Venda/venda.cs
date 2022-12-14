@@ -10,31 +10,31 @@ namespace Sistema_de_Venda
     {
 
         private int _id;
-        private string _valor;
-        private int _id_func;
-        private int _id_prod;
-        private string _data;
+        private int _quantidade;
+        private decimal _valorTotal;
+        private DateTime _data;
+        private int _idProd;
 
 
 
 
 
 
-        public venda(string valor, string data )
+        public venda(int quantidade, decimal valorTotal, DateTime data, int idProd )
         {
-
-            Valor = valor;
-            Data = data;
+            _quantidade = quantidade;
+            _valorTotal = valorTotal;
+            _data = data;
+            _idProd = idProd;
 
 
         }
 
-        public venda(int id, string valor, int id_func, int id_prod, string data) :
-            this(valor, data)
+        public venda(int id, int quantidade, decimal valorTotal, DateTime data, int idProd) :
+            this(quantidade,valorTotal, data,idProd)
         {
             _id = id;
-            _id_func = id_func;
-            _id_func = id_prod;
+
         }
 
 
@@ -43,37 +43,25 @@ namespace Sistema_de_Venda
             get { return _id; }
         }
 
-        public int Id_Func
+        public int Quantidade
         {
-            get { return _id_func; }
+            get { return _quantidade; }
         }
 
-        public int Id_Produto
+        public decimal ValorTotal
         {
-            get { return _id_prod; }
+            get { return _valorTotal; }
         }
 
         //Validação do Nome.
-        public string Valor
-        {
-            get { return _valor; }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("O nome informado não é um texto válido");
-                _valor = value;
-            }
-        }
-
-        public string Data
+        public DateTime Data
         {
             get { return _data; }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("O nome informado não é um texto válido");
-                _data = value;
-            }
+        }
+
+        public int IdProd
+        {
+            get { return _idProd; }
         }
 
     }

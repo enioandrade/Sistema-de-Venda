@@ -20,16 +20,16 @@ namespace Sistema_de_Venda
 
         private void frm_carregar_Load(object sender, EventArgs e)
         {
-            this.progressBar1.Maximum = 30;
+            this.progressBar1.Maximum = 40;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (this.progressBar1.Value >= 30) 
+            if (this.progressBar1.Value >= 40) 
             {
                 this.timer1.Enabled = false;
             }
-            if(this.progressBar1.Value == 30)
+            if(this.progressBar1.Value == 40)
             {
                 this.Visible = false;
                 frm_login login = new frm_login();

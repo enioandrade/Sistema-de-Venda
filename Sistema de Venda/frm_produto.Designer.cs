@@ -54,7 +54,12 @@
             this.clh_sabor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clh_tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clh_disp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clh_imagem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txt_imagem = new System.Windows.Forms.TextBox();
+            this.btn_imagem = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_valor = new Sistema_de_Venda.txtValor();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -81,7 +86,7 @@
             // 
             this.txt_produto.Location = new System.Drawing.Point(193, 130);
             this.txt_produto.Name = "txt_produto";
-            this.txt_produto.Size = new System.Drawing.Size(533, 22);
+            this.txt_produto.Size = new System.Drawing.Size(545, 22);
             this.txt_produto.TabIndex = 0;
             // 
             // label3
@@ -98,7 +103,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 226);
+            this.label5.Location = new System.Drawing.Point(24, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 25);
             this.label5.TabIndex = 8;
@@ -106,10 +111,10 @@
             // 
             // txt_quant
             // 
-            this.txt_quant.Location = new System.Drawing.Point(143, 230);
+            this.txt_quant.Location = new System.Drawing.Point(155, 229);
             this.txt_quant.Name = "txt_quant";
-            this.txt_quant.Size = new System.Drawing.Size(112, 22);
-            this.txt_quant.TabIndex = 2;
+            this.txt_quant.Size = new System.Drawing.Size(100, 22);
+            this.txt_quant.TabIndex = 3;
             // 
             // btn_cadastrar
             // 
@@ -121,7 +126,7 @@
             this.btn_cadastrar.Location = new System.Drawing.Point(12, 304);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(86, 82);
-            this.btn_cadastrar.TabIndex = 4;
+            this.btn_cadastrar.TabIndex = 6;
             this.btn_cadastrar.Text = "Salvar";
             this.btn_cadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_cadastrar.UseVisualStyleBackColor = false;
@@ -137,7 +142,7 @@
             this.btn_excluir.Location = new System.Drawing.Point(113, 304);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(86, 82);
-            this.btn_excluir.TabIndex = 5;
+            this.btn_excluir.TabIndex = 7;
             this.btn_excluir.Text = "Excluir";
             this.btn_excluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_excluir.UseVisualStyleBackColor = false;
@@ -149,10 +154,10 @@
             this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_editar.Image = ((System.Drawing.Image)(resources.GetObject("btn_editar.Image")));
             this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_editar.Location = new System.Drawing.Point(546, 304);
+            this.btn_editar.Location = new System.Drawing.Point(214, 305);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(86, 82);
-            this.btn_editar.TabIndex = 6;
+            this.btn_editar.TabIndex = 8;
             this.btn_editar.Text = "Editar";
             this.btn_editar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_editar.UseVisualStyleBackColor = true;
@@ -167,7 +172,7 @@
             this.btn_voltar.Location = new System.Drawing.Point(652, 304);
             this.btn_voltar.Name = "btn_voltar";
             this.btn_voltar.Size = new System.Drawing.Size(86, 82);
-            this.btn_voltar.TabIndex = 7;
+            this.btn_voltar.TabIndex = 9;
             this.btn_voltar.Text = "Voltar";
             this.btn_voltar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_voltar.UseVisualStyleBackColor = true;
@@ -195,7 +200,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(278, 175);
+            this.label4.Location = new System.Drawing.Point(264, 176);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 25);
             this.label4.TabIndex = 28;
@@ -203,23 +208,23 @@
             // 
             // txt_sabor
             // 
-            this.txt_sabor.Location = new System.Drawing.Point(360, 176);
+            this.txt_sabor.Location = new System.Drawing.Point(346, 176);
             this.txt_sabor.Name = "txt_sabor";
             this.txt_sabor.Size = new System.Drawing.Size(183, 22);
-            this.txt_sabor.TabIndex = 29;
+            this.txt_sabor.TabIndex = 2;
             // 
             // txt_tipo
             // 
-            this.txt_tipo.Location = new System.Drawing.Point(360, 234);
+            this.txt_tipo.Location = new System.Drawing.Point(346, 229);
             this.txt_tipo.Name = "txt_tipo";
             this.txt_tipo.Size = new System.Drawing.Size(183, 22);
-            this.txt_tipo.TabIndex = 30;
+            this.txt_tipo.TabIndex = 4;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(278, 230);
+            this.label7.Location = new System.Drawing.Point(278, 226);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 25);
             this.label7.TabIndex = 31;
@@ -229,7 +234,7 @@
             // 
             this.txt_disp.AutoSize = true;
             this.txt_disp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_disp.Location = new System.Drawing.Point(573, 177);
+            this.txt_disp.Location = new System.Drawing.Point(553, 174);
             this.txt_disp.Name = "txt_disp";
             this.txt_disp.Size = new System.Drawing.Size(153, 24);
             this.txt_disp.TabIndex = 32;
@@ -245,7 +250,8 @@
             this.clh_quant,
             this.clh_sabor,
             this.clh_tipo,
-            this.clh_disp});
+            this.clh_disp,
+            this.clh_imagem});
             this.ltv_produto.FullRowSelect = true;
             this.ltv_produto.HideSelection = false;
             this.ltv_produto.Location = new System.Drawing.Point(12, 392);
@@ -272,22 +278,61 @@
             // clh_quant
             // 
             this.clh_quant.Text = "Quantidade";
-            this.clh_quant.Width = 119;
+            this.clh_quant.Width = 121;
             // 
             // clh_sabor
             // 
             this.clh_sabor.Text = "Sabor";
-            this.clh_sabor.Width = 131;
+            this.clh_sabor.Width = 116;
             // 
             // clh_tipo
             // 
             this.clh_tipo.Text = "Tipo";
-            this.clh_tipo.Width = 125;
+            this.clh_tipo.Width = 106;
             // 
             // clh_disp
             // 
             this.clh_disp.Text = "Disponivel";
             this.clh_disp.Width = 363;
+            // 
+            // clh_imagem
+            // 
+            this.clh_imagem.Text = "Imagem";
+            // 
+            // txt_imagem
+            // 
+            this.txt_imagem.Location = new System.Drawing.Point(705, 170);
+            this.txt_imagem.Multiline = true;
+            this.txt_imagem.Name = "txt_imagem";
+            this.txt_imagem.Size = new System.Drawing.Size(33, 27);
+            this.txt_imagem.TabIndex = 5;
+            this.txt_imagem.Visible = false;
+            // 
+            // btn_imagem
+            // 
+            this.btn_imagem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_imagem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_imagem.Image = ((System.Drawing.Image)(resources.GetObject("btn_imagem.Image")));
+            this.btn_imagem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_imagem.Location = new System.Drawing.Point(549, 304);
+            this.btn_imagem.Name = "btn_imagem";
+            this.btn_imagem.Size = new System.Drawing.Size(86, 82);
+            this.btn_imagem.TabIndex = 35;
+            this.btn_imagem.Text = " Procurar Imagem";
+            this.btn_imagem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_imagem.UseVisualStyleBackColor = false;
+            this.btn_imagem.Click += new System.EventHandler(this.btn_imagem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(549, 203);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(189, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 36;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txt_valor
             // 
@@ -303,6 +348,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(751, 566);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btn_imagem);
+            this.Controls.Add(this.txt_imagem);
             this.Controls.Add(this.ltv_produto);
             this.Controls.Add(this.txt_disp);
             this.Controls.Add(this.label7);
@@ -322,10 +370,13 @@
             this.Controls.Add(this.txt_produto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frm_produto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_produto";
             this.Load += new System.EventHandler(this.frm_produto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,5 +410,9 @@
         private System.Windows.Forms.ColumnHeader clh_sabor;
         private System.Windows.Forms.ColumnHeader clh_tipo;
         private System.Windows.Forms.ColumnHeader clh_disp;
+        private System.Windows.Forms.TextBox txt_imagem;
+        private System.Windows.Forms.Button btn_imagem;
+        private System.Windows.Forms.ColumnHeader clh_imagem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
