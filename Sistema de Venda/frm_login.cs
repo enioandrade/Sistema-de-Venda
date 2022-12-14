@@ -42,19 +42,8 @@ namespace Sistema_de_Venda
                 DAO Dao = new DAO();
                 admin = Dao.EntrarLogin(login);
 
-                MessageBox.Show(cript);
-                //Funcionario login;
-
-                //criptografia md5 = new criptografia();
-                //string hash = md5.crip(txt_senha.Text);
-
-                //login = new Funcionario(txt_usuario.Text, hash);
-
-                //DAO Dao = new DAO();
-                //admin = Dao.EntrarLogin(login);
-
-                //MessageBox.Show(hash);
-
+                
+                //MessageBox.Show(cript);
 
 
                 if (admin != null)

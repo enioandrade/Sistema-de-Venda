@@ -18,33 +18,10 @@ namespace Sistema_de_Venda
 
         }
 
-        protected override void OnLostFocus(EventArgs e)
-        {
-            base.OnLostFocus(e);
-            this.BackColor = Color.White;
-
-            if (this.Text == "")
-                return;
-            
-            try
-            {
-                double valor = Convert.ToDouble(this.Text.Replace("R$ ", ""));
-                this.Text = String.Format("{0:c}", valor);
-            }
-            catch
-            {
-                this.Text = "";
-                MessageBox.Show("Valor invalido!!");
-            }
-
-
-
-
-        }
         protected override void OnKeyDown(KeyEventArgs e)
         {
             base.OnKeyDown(e);
-            if(e.KeyCode == Keys.Escape) 
+            if (e.KeyCode == Keys.Escape)
             {
                 this.Text = "";
                 e.SuppressKeyPress = true;

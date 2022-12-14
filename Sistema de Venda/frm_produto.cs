@@ -8,6 +8,7 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Sistema_de_Venda
@@ -39,13 +40,13 @@ namespace Sistema_de_Venda
                 
                 if (txt_disp.Checked)
                 {
-                    proj = new Produtos(txt_produto.Text, txt_valor.Text, txt_quant.Text, txt_sabor.Text, txt_tipo.Text, "DISPONIVEL");
+                    proj = new Produtos(txt_produto.Text, Convert.ToDecimal(txt_valor.Text), int.Parse(txt_quant.Text), txt_sabor.Text, txt_tipo.Text,txt_imagem.Text, "DISPONIVEL");
                     DAO Dao = new DAO();
                     Dao.InserirProduto(proj);
                 }
                 else if (txt_disp.Checked == false)
                 {
-                    proj = new Produtos(txt_produto.Text, txt_valor.Text, txt_quant.Text, txt_sabor.Text, txt_tipo.Text, " NAO DISPONIVEL");
+                    proj = new Produtos(txt_produto.Text, Convert.ToDecimal(txt_valor.Text), int.Parse(txt_quant.Text), txt_sabor.Text, txt_tipo.Text, txt_imagem.Text, " NAO DISPONIVEL");
                     DAO Dao = new DAO();
                     Dao.InserirProduto(proj);
                 }
@@ -74,11 +75,12 @@ namespace Sistema_de_Venda
                 {
                     ListViewItem lv = new ListViewItem(proj.Id.ToString());
                     lv.SubItems.Add(proj.Produto);
-                    lv.SubItems.Add(proj.Valor);
-                    lv.SubItems.Add(proj.Quantidade);
+                    lv.SubItems.Add(proj.Valor.ToString());
+                    lv.SubItems.Add(proj.Quantidade.ToString());
                     lv.SubItems.Add(proj.Sabor);
                     lv.SubItems.Add(proj.Tipo);
                     lv.SubItems.Add(proj.Disponivel);
+                    lv.SubItems.Add(proj.Imagem);
                     ltv_produto.Items.Add(lv);
 
                 }
@@ -93,7 +95,9 @@ namespace Sistema_de_Venda
             txt_sabor.Clear();
             txt_tipo.Clear();
             txt_id.Clear();
+            txt_imagem.Clear();
             txt_disp.Checked= false;
+            pictureBox1.Image = null;
             
 
 
@@ -150,10 +154,12 @@ namespace Sistema_de_Venda
                 {
                     txt_disp.Checked = true;
                 }
-                else if (ltv_produto.Items[index].SubItems[5].Text == "NAO DISPONIVEL")
+                else if (ltv_produto.Items[index].SubItems[6].Text == "NAO DISPONIVEL")
                 {
                     txt_disp.Checked = false;
                 }
+                pictureBox1.ImageLocation = ltv_produto.Items[index].SubItems[7].Text;
+                txt_imagem.Text = ltv_produto.Items[index].SubItems[7].Text;
 
 
             }
@@ -173,13 +179,13 @@ namespace Sistema_de_Venda
 
                 if (txt_disp.Checked)
                 {
-                    proj = new Produtos(Id,txt_produto.Text, txt_valor.Text, txt_quant.Text, txt_sabor.Text, txt_tipo.Text, "DISPONIVEL");
+                    proj = new Produtos(Id,txt_produto.Text, Convert.ToDecimal(txt_valor.Text), int.Parse(txt_quant.Text), txt_sabor.Text, txt_tipo.Text, txt_imagem.Text, "DISPONIVEL");
                     DAO Dao = new DAO();
                     Dao.AtualizarProduto(proj);
                 }
                 else if (txt_disp.Checked == false)
                 {
-                    proj = new Produtos(Id,txt_produto.Text, txt_valor.Text, txt_quant.Text, txt_sabor.Text, txt_tipo.Text, " NAO DISPONIVEL");
+                    proj = new Produtos(Id,txt_produto.Text, Convert.ToDecimal(txt_valor.Text), int.Parse(txt_quant.Text), txt_sabor.Text, txt_tipo.Text, txt_imagem.Text, " NAO DISPONIVEL");
                     DAO Dao = new DAO();
                     Dao.AtualizarProduto(proj);
                 }
@@ -194,6 +200,32 @@ namespace Sistema_de_Venda
             {
                 MessageBox.Show(error.Message);
             }
+        }
+
+        private void txt_valor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_imagem_Click(object sender, EventArgs e)
+        {
+
+            
+                OpenFileDialog g = new OpenFileDialog();
+                g.Filter = "Imagens(*.jpg;*.jpeg;*.bmp;*.png)|*.jpg;*.jpeg;*.bmp;*.png";
+                if (g.ShowDialog() == DialogResult.OK)
+                {
+                pictureBox1.Image = new Bitmap(g.FileName);
+
+                txt_imagem.Text =g.FileName;
+               
+                }
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

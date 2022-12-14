@@ -17,7 +17,7 @@ namespace Sistema_de_Venda
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_carregar());
+            Application.Run(new frm_login());
         }
     }
 }

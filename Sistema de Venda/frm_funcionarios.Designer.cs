@@ -320,7 +320,7 @@
             this.comboBoxAdmin.Location = new System.Drawing.Point(912, 276);
             this.comboBoxAdmin.Name = "comboBoxAdmin";
             this.comboBoxAdmin.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxAdmin.TabIndex = 31;
+            this.comboBoxAdmin.TabIndex = 8;
             this.comboBoxAdmin.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label10
@@ -349,10 +349,10 @@
             this.btn_limpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_limpar.Image = ((System.Drawing.Image)(resources.GetObject("btn_limpar.Image")));
             this.btn_limpar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_limpar.Location = new System.Drawing.Point(104, 321);
+            this.btn_limpar.Location = new System.Drawing.Point(111, 321);
             this.btn_limpar.Name = "btn_limpar";
             this.btn_limpar.Size = new System.Drawing.Size(86, 82);
-            this.btn_limpar.TabIndex = 9;
+            this.btn_limpar.TabIndex = 10;
             this.btn_limpar.Text = "Limpar";
             this.btn_limpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_limpar.UseVisualStyleBackColor = true;
@@ -367,7 +367,7 @@
             this.btn_voltar.Location = new System.Drawing.Point(947, 321);
             this.btn_voltar.Name = "btn_voltar";
             this.btn_voltar.Size = new System.Drawing.Size(86, 82);
-            this.btn_voltar.TabIndex = 12;
+            this.btn_voltar.TabIndex = 13;
             this.btn_voltar.Text = "Voltar";
             this.btn_voltar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_voltar.UseVisualStyleBackColor = true;
@@ -383,7 +383,7 @@
             this.btn_excluir.Location = new System.Drawing.Point(743, 321);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(86, 82);
-            this.btn_excluir.TabIndex = 10;
+            this.btn_excluir.TabIndex = 11;
             this.btn_excluir.Text = "Excluir";
             this.btn_excluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_excluir.UseVisualStyleBackColor = false;
@@ -398,7 +398,7 @@
             this.btn_editar.Location = new System.Drawing.Point(846, 321);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(86, 82);
-            this.btn_editar.TabIndex = 11;
+            this.btn_editar.TabIndex = 12;
             this.btn_editar.Text = "Editar";
             this.btn_editar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_editar.UseVisualStyleBackColor = true;
@@ -413,8 +413,8 @@
             this.btn_cadastrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_cadastrar.Location = new System.Drawing.Point(12, 321);
             this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Size = new System.Drawing.Size(77, 82);
-            this.btn_cadastrar.TabIndex = 8;
+            this.btn_cadastrar.Size = new System.Drawing.Size(82, 82);
+            this.btn_cadastrar.TabIndex = 9;
             this.btn_cadastrar.Text = "Adicionar";
             this.btn_cadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_cadastrar.UseVisualStyleBackColor = false;
@@ -453,6 +453,8 @@
             this.Controls.Add(this.txt_nome);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frm_funcionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionarios";

@@ -11,24 +11,26 @@ namespace Sistema_de_Venda
 
         private int _id;
         private string _produto;
-        private string _valor;
-        private string _quantidade;
+        private decimal _valor;
+        private int _quantidade;
         private string _sabor;
         private string _tipo;
+        private string _imagem;
         private string _disponivel;
 
-        public Produtos(string produto, string valor, string quantidade, string sabor, string tipo, string disponivel)
+        public Produtos(string produto, decimal valor, int quantidade, string sabor, string tipo,string imagem, string disponivel)
         {
             Produto = produto;
-            Valor = valor;
-            Quantidade = quantidade;
+            _valor = valor;
+            _quantidade = quantidade;
             Sabor = sabor;
             Tipo = tipo;
+            Imagem = imagem;
             Disponivel = disponivel;
         }
 
-        public Produtos(int id, string produto,string valor,string quantidade, string sabor, string tipo, string disponivel) :
-             this(produto,valor,quantidade,sabor,tipo,disponivel)
+        public Produtos(int id, string produto,decimal valor,int quantidade, string sabor, string tipo,string imagem, string disponivel) :
+             this(produto,valor,quantidade,sabor,tipo,imagem,disponivel)
         {
             _id = id;
         }
@@ -48,26 +50,14 @@ namespace Sistema_de_Venda
             }
         }
 
-        public string Valor
+        public decimal Valor
         {
             get { return _valor; }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("O nome informado não é um texto válido");
-                _valor = value;
-            }
         }
 
-        public string Quantidade
+        public int Quantidade
         {
             get { return _quantidade; }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("O nome informado não é um texto válido");
-                _quantidade = value;
-            }
         }
 
 
@@ -90,6 +80,16 @@ namespace Sistema_de_Venda
                 if (string.IsNullOrEmpty(value))
                     throw new Exception("O nome informado não é um texto válido");
                 _tipo = value;
+            }
+        }
+        public string Imagem
+        {
+            get { return _imagem; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    throw new Exception("O nome informado não é um texto válido");
+                _imagem = value;
             }
         }
 

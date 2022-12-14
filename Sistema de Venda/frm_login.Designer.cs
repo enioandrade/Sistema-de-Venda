@@ -42,7 +42,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(375, 48);
+            this.label1.Location = new System.Drawing.Point(369, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(278, 38);
             this.label1.TabIndex = 0;
@@ -63,9 +63,9 @@
             this.label2.ForeColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(368, 132);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 20);
+            this.label2.Size = new System.Drawing.Size(74, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Usuário:";
+            this.label2.Text = "Usuário";
             // 
             // label3
             // 
@@ -75,9 +75,9 @@
             this.label3.ForeColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(368, 208);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 20);
+            this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Senha:";
+            this.label3.Text = "Senha";
             // 
             // txt_senha
             // 
@@ -89,13 +89,14 @@
             // 
             // btn_entrar
             // 
-            this.btn_entrar.BackColor = System.Drawing.Color.Gray;
+            this.btn_entrar.BackColor = System.Drawing.Color.DimGray;
+            this.btn_entrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_entrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_entrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_entrar.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_entrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_entrar.ForeColor = System.Drawing.Color.White;
             this.btn_entrar.Location = new System.Drawing.Point(454, 276);
             this.btn_entrar.Name = "btn_entrar";
-            this.btn_entrar.Size = new System.Drawing.Size(100, 40);
+            this.btn_entrar.Size = new System.Drawing.Size(110, 40);
             this.btn_entrar.TabIndex = 2;
             this.btn_entrar.Text = "ENTRAR";
             this.btn_entrar.UseVisualStyleBackColor = false;
@@ -114,6 +115,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_usuario);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_login";
             this.Text = "frm_login";
             this.Load += new System.EventHandler(this.frm_login_Load);
